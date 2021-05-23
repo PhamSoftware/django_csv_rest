@@ -29,6 +29,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         path = options["path"]
+        # clear out the db first for now
+        Home.objects.all().delete()
         with open(f"{path}", newline="") as file:
             reader = csv.DictReader(file)
             for row in reader:

@@ -9,9 +9,7 @@ from django.db.models import (
 
 
 class Home(Model):
-    UNITS = [
-        ("SqFt", "sqft")
-    ]
+    UNITS = [("SqFt", "sqft")]
 
     TYPES = [
         ("SingleFamily", "Single Family"),
